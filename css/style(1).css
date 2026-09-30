@@ -1,0 +1,62 @@
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+}
+
+p {
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+/* ---------- Mobile view (default): one div per row ---------- */
+div {
+    display: block;
+    width: 90%;
+    margin: 5px auto;
+    padding: 2px;
+}
+
+div img {
+    display: block;
+    width: 150px;
+    height: auto;      /* lets max-height scale the image without distortion */
+    margin: auto;
+}
+
+/* ---------- Tablet view: two divs per row ---------- */
+@media (min-width: 772px) {
+    div {
+        display: inline-block;
+        width: 45%;
+        margin: 5px;
+    }
+
+    div img {
+        max-height: 30vh;
+        width: auto;        /* keeps the aspect ratio when max-height applies */
+        max-width: 100%;    /* keeps the image inside its div */
+    }
+}
+
+/* ---------- Large screen view: three divs per row ---------- */
+@media (min-width: 998px) {
+    div {
+        width: 30%;
+    }
+}
